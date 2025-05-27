@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "12198b8258e2eed541af386406badbe1"
+name = "test-01"
+handle = "test-18232"
+application_url = "https://coverage-modern-collectible-housewives.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "nur-alam-test.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_products,write_products"
+
+[auth]
+redirect_urls = [
+  "https://coverage-modern-collectible-housewives.trycloudflare.com/auth/callback",
+  "https://coverage-modern-collectible-housewives.trycloudflare.com/auth/shopify/callback",
+  "https://coverage-modern-collectible-housewives.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2025-04"
+
+[pos]
+embedded = false
