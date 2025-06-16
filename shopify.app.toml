@@ -3,7 +3,7 @@
 client_id = "12198b8258e2eed541af386406badbe1"
 name = "test-01"
 handle = "test-18232"
-application_url = "https://coverage-modern-collectible-housewives.trycloudflare.com"
+application_url = "https://photographic-squad-correspondence-jerry.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_products,write_products"
 
 [auth]
 redirect_urls = [
-  "https://coverage-modern-collectible-housewives.trycloudflare.com/auth/callback",
-  "https://coverage-modern-collectible-housewives.trycloudflare.com/auth/shopify/callback",
-  "https://coverage-modern-collectible-housewives.trycloudflare.com/api/auth/callback"
+  "https://photographic-squad-correspondence-jerry.trycloudflare.com/auth/callback",
+  "https://photographic-squad-correspondence-jerry.trycloudflare.com/auth/shopify/callback",
+  "https://photographic-squad-correspondence-jerry.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
