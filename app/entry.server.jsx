@@ -4,8 +4,14 @@ import { RemixServer } from "@remix-run/react";
 import { createReadableStreamFromReadable } from "@remix-run/node";
 import { isbot } from "isbot";
 import { addDocumentResponseHeaders } from "./shopify.server";
+import connectDB from "./db.server";
 
 export const streamTimeout = 5000;
+
+connectDB()
+.then(()=>{
+  console.log("DB Connected")
+}).catch((err)=> console.log("DB Connection error", err));
 
 export default async function handleRequest(
   request,

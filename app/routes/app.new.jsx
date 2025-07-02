@@ -11,31 +11,26 @@ import {
   import { TitleBar } from "@shopify/app-bridge-react";
   import { useEffect, useState } from "react";
   import { useLoaderData } from "@remix-run/react";
-  import {
-    findAllProducts,
-    ProductUpdate,
-    ProductCreate,
-  } from "../prismaOperation";
   
   // Loader function to fetch all products
   export let loader = async () => {
-    const products = await findAllProducts(); // Ensure calling the function
-    return { products }; // Returning a plain object, loaderData will have a `products` property
+    // const products = await findAllProducts(); // Ensure calling the function
+    return null; // Returning a plain object, loaderData will have a `products` property
   };
   
   // Action function to handle product creation or updating
   export let action = async ({ request }) => {
     const formData = new URLSearchParams(await request.text());
-    const name = formData.get("name");
-    const price = parseFloat(formData.get("price") || "0");
-    const description = formData.get("description");
-    const id = parseInt(formData.get("id") || "0");
+    // const name = formData.get("name");
+    // const price = parseFloat(formData.get("price") || "0");
+    // const description = formData.get("description");
+    // const id = parseInt(formData.get("id") || "0");
   
-    if (id) {
-      await ProductUpdate(id, name, price, description);
-    } else {
-      await ProductCreate(name, price, description);
-    }
+    // if (id) {
+    //   await ProductUpdate(id, name, price, description);
+    // } else {
+    //   await ProductCreate(name, price, description);
+    // }
   
     return null; // Redirect or re-fetch if necessary
   };
